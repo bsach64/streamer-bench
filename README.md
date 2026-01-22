@@ -1,8 +1,8 @@
 # Streamer Vs Regular Checkpoint/Restore Benchmarks
 
-Workload: `stress.py` (uses `1` CPU core, `500MB` memory, for each of the runs you can see the state of system in `results/*_system_info.txt`)
-Compression Algos: `none`, `tar`, `lz4`, `gzip`, `zlib`
-Storage: `local`, `s3`, `cedana` (`s3` runs timed out for `none` and `tar`)
+Workload: `stress.py` (uses `1` CPU core, `500MB` memory, for each of the runs you can see the state of system in `results/*_system_info.txt`) \
+Compression Algos: `none`, `tar`, `lz4`, `gzip`, `zlib` \
+Storage: `local`, `s3`, `cedana` (`s3` runs timed out for `none` and `tar`) \
 
 I did 3 Runs for each storage type.
 
