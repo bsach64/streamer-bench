@@ -1,0 +1,560 @@
+[root@fedora]/home/bsach/Code/cedana# time RUNS=3 ./run_benchmarks.sh
+Capturing system information...
+git: e92648e9616e7da8066c6bd941babbb48ae80b4d
+cedana version v0.9.281-9-ge92648e9
+  available cpufreq governors: performance powersave
+                  The governor "performance" may decide which speed to use
+System info saved to: system_info.txt
+
+Starting Cedana benchmarks...
+Job base: test-job-1769076923
+Runs per test: 3
+Output file: timing_results.csv
+
+=== RUN: 1 ===
+=== Testing with none compression ===
+=== Testing with 0 stream(s)===
+Testing: none compression with 0 streams (run 1/3)
+  Starting job: test-job-1769076923-none-0-run1
+27.035981ms      cedana.(*Server).Run.Manage
+    1.564µs      defaults.FillMissingRunDefaults
+    1.022µs      validation.ValidateRunRequest
+      965ns      process.WritePIDFile
+    1.032µs      cedana.(*Server).Run.Attach
+   13.516µs      cedana.pluginRunMiddleware
+  222.878µs      process.SetupIO[...]
+  325.805µs      cedana.(*Server).Run.pluginRunHandler
+27.602763ms      run (total)
+
+Running managed process PID 636162
+  Checkpoint: 57.67 s, Restore: 52.17 s, Total: 109.84 s
+Killed job test-job-1769076923-none-0-run1
+Deleted job test-job-1769076923-none-0-run1
+
+=== Testing with 2 stream(s)===
+Testing: none compression with 2 streams (run 1/3)
+  Starting job: test-job-1769076923-none-2-run1
+31.867437ms      cedana.(*Server).Run.Manage
+     2.05µs      defaults.FillMissingRunDefaults
+    1.497µs      validation.ValidateRunRequest
+    1.433µs      process.WritePIDFile
+     1.17µs      cedana.(*Server).Run.Attach
+   19.017µs      cedana.pluginRunMiddleware
+   2.6796ms      process.SetupIO[...]
+  390.988µs      cedana.(*Server).Run.pluginRunHandler
+34.963192ms      run (total)
+
+Running managed process PID 636899
+  Checkpoint: 58.03 s, Restore: 52.53 s, Total: 110.56 s
+Killed job test-job-1769076923-none-2-run1
+Deleted job test-job-1769076923-none-2-run1
+
+=== Testing with 4 stream(s)===
+Testing: none compression with 4 streams (run 1/3)
+  Starting job: test-job-1769076923-none-4-run1
+ 27.89854ms      cedana.(*Server).Run.Manage
+    1.741µs      defaults.FillMissingRunDefaults
+    1.152µs      validation.ValidateRunRequest
+    1.031µs      process.WritePIDFile
+      891ns      cedana.(*Server).Run.Attach
+    13.22µs      cedana.pluginRunMiddleware
+  115.621µs      process.SetupIO[...]
+  511.417µs      cedana.(*Server).Run.pluginRunHandler
+28.543613ms      run (total)
+
+Running managed process PID 637166
+  Checkpoint: 63.19 s, Restore: 49.68 s, Total: 112.87 s
+Killed job test-job-1769076923-none-4-run1
+Deleted job test-job-1769076923-none-4-run1
+
+=== Testing with 8 stream(s)===
+Testing: none compression with 8 streams (run 1/3)
+  Starting job: test-job-1769076923-none-8-run1
+20.895715ms      cedana.(*Server).Run.Manage
+    1.472µs      defaults.FillMissingRunDefaults
+      975ns      validation.ValidateRunRequest
+      677ns      process.WritePIDFile
+      878ns      cedana.(*Server).Run.Attach
+   11.049µs      cedana.pluginRunMiddleware
+  122.463µs      process.SetupIO[...]
+  286.913µs      cedana.(*Server).Run.pluginRunHandler
+21.320142ms      run (total)
+
+Running managed process PID 637384
+  Checkpoint: 51.41 s, Restore: 49.91 s, Total: 101.32 s
+Killed job test-job-1769076923-none-8-run1
+Deleted job test-job-1769076923-none-8-run1
+
+=== Testing with tar compression ===
+=== Testing with 0 stream(s)===
+Testing: tar compression with 0 streams (run 1/3)
+  Starting job: test-job-1769076923-tar-0-run1
+23.980047ms      cedana.(*Server).Run.Manage
+    1.524µs      defaults.FillMissingRunDefaults
+      1.1µs      validation.ValidateRunRequest
+      832ns      process.WritePIDFile
+      887ns      cedana.(*Server).Run.Attach
+   21.165µs      cedana.pluginRunMiddleware
+  120.833µs      process.SetupIO[...]
+  285.812µs      cedana.(*Server).Run.pluginRunHandler
+  24.4122ms      run (total)
+
+Running managed process PID 637562
+  Checkpoint: 56.37 s, Restore: 49.12 s, Total: 105.49 s
+Killed job test-job-1769076923-tar-0-run1
+Deleted job test-job-1769076923-tar-0-run1
+
+=== Testing with 2 stream(s)===
+Testing: tar compression with 2 streams (run 1/3)
+  Starting job: test-job-1769076923-tar-2-run1
+23.434837ms      cedana.(*Server).Run.Manage
+    1.845µs      defaults.FillMissingRunDefaults
+    5.393µs      validation.ValidateRunRequest
+    1.073µs      process.WritePIDFile
+      981ns      cedana.(*Server).Run.Attach
+   13.974µs      cedana.pluginRunMiddleware
+ 2.750399ms      process.SetupIO[...]
+   456.47µs      cedana.(*Server).Run.pluginRunHandler
+26.664972ms      run (total)
+
+Running managed process PID 637815
+  Checkpoint: 56.76 s, Restore: 50.86 s, Total: 107.62 s
+Killed job test-job-1769076923-tar-2-run1
+Deleted job test-job-1769076923-tar-2-run1
+
+=== Testing with 4 stream(s)===
+Testing: tar compression with 4 streams (run 1/3)
+  Starting job: test-job-1769076923-tar-4-run1
+21.605021ms      cedana.(*Server).Run.Manage
+    2.041µs      defaults.FillMissingRunDefaults
+    1.426µs      validation.ValidateRunRequest
+    1.203µs      process.WritePIDFile
+    2.626µs      cedana.(*Server).Run.Attach
+     14.5µs      cedana.pluginRunMiddleware
+  145.448µs      process.SetupIO[...]
+  652.225µs      cedana.(*Server).Run.pluginRunHandler
+ 22.42449ms      run (total)
+
+Running managed process PID 638075
+  Checkpoint: 60.28 s, Restore: 57.08 s, Total: 117.36 s
+Killed job test-job-1769076923-tar-4-run1
+Deleted job test-job-1769076923-tar-4-run1
+
+=== Testing with 8 stream(s)===
+Testing: tar compression with 8 streams (run 1/3)
+  Starting job: test-job-1769076923-tar-8-run1
+27.191493ms      cedana.(*Server).Run.Manage
+    1.986µs      defaults.FillMissingRunDefaults
+    1.091µs      validation.ValidateRunRequest
+      734ns      process.WritePIDFile
+    1.002µs      cedana.(*Server).Run.Attach
+   14.267µs      cedana.pluginRunMiddleware
+  127.863µs      process.SetupIO[...]
+  296.765µs      cedana.(*Server).Run.pluginRunHandler
+27.635201ms      run (total)
+
+Running managed process PID 638670
+  Checkpoint: 56.59 s, Restore: 52.08 s, Total: 108.67 s
+Killed job test-job-1769076923-tar-8-run1
+Deleted job test-job-1769076923-tar-8-run1
+
+=== Testing with gzip compression ===
+=== Testing with 0 stream(s)===
+Testing: gzip compression with 0 streams (run 1/3)
+  Starting job: test-job-1769076923-gzip-0-run1
+24.692367ms      cedana.(*Server).Run.Manage
+    1.639µs      defaults.FillMissingRunDefaults
+    1.443µs      validation.ValidateRunRequest
+     1.11µs      process.WritePIDFile
+      913ns      cedana.(*Server).Run.Attach
+   13.955µs      cedana.pluginRunMiddleware
+  140.094µs      process.SetupIO[...]
+  319.812µs      cedana.(*Server).Run.pluginRunHandler
+25.171333ms      run (total)
+
+Running managed process PID 639235
+  Checkpoint: 5.74 s, Restore: 4.09 s, Total: 9.83 s
+Killed job test-job-1769076923-gzip-0-run1
+Deleted job test-job-1769076923-gzip-0-run1
+
+=== Testing with 2 stream(s)===
+Testing: gzip compression with 2 streams (run 1/3)
+  Starting job: test-job-1769076923-gzip-2-run1
+30.209482ms      cedana.(*Server).Run.Manage
+    1.563µs      defaults.FillMissingRunDefaults
+    1.038µs      validation.ValidateRunRequest
+    1.006µs      process.WritePIDFile
+      952ns      cedana.(*Server).Run.Attach
+   13.821µs      cedana.pluginRunMiddleware
+   120.15µs      process.SetupIO[...]
+   347.16µs      cedana.(*Server).Run.pluginRunHandler
+30.695172ms      run (total)
+
+Running managed process PID 639451
+  Checkpoint: 8.62 s, Restore: 4.24 s, Total: 12.86 s
+Killed job test-job-1769076923-gzip-2-run1
+Deleted job test-job-1769076923-gzip-2-run1
+
+=== Testing with 4 stream(s)===
+Testing: gzip compression with 4 streams (run 1/3)
+  Starting job: test-job-1769076923-gzip-4-run1
+23.439223ms      cedana.(*Server).Run.Manage
+    1.994µs      defaults.FillMissingRunDefaults
+    1.509µs      validation.ValidateRunRequest
+    1.158µs      process.WritePIDFile
+    1.024µs      cedana.(*Server).Run.Attach
+    15.89µs      cedana.pluginRunMiddleware
+  141.082µs      process.SetupIO[...]
+  352.157µs      cedana.(*Server).Run.pluginRunHandler
+23.954037ms      run (total)
+
+Running managed process PID 639587
+  Checkpoint: 4.25 s, Restore: 4.42 s, Total: 8.67 s
+Killed job test-job-1769076923-gzip-4-run1
+Deleted job test-job-1769076923-gzip-4-run1
+
+=== Testing with 8 stream(s)===
+Testing: gzip compression with 8 streams (run 1/3)
+  Starting job: test-job-1769076923-gzip-8-run1
+27.662842ms      cedana.(*Server).Run.Manage
+    1.764µs      defaults.FillMissingRunDefaults
+    1.203µs      validation.ValidateRunRequest
+      970ns      process.WritePIDFile
+    1.017µs      cedana.(*Server).Run.Attach
+   13.107µs      cedana.pluginRunMiddleware
+   87.925µs      process.SetupIO[...]
+  301.056µs      cedana.(*Server).Run.pluginRunHandler
+28.069884ms      run (total)
+
+Running managed process PID 639713
+  Checkpoint: 5.45 s, Restore: 5.71 s, Total: 11.16 s
+Killed job test-job-1769076923-gzip-8-run1
+Deleted job test-job-1769076923-gzip-8-run1
+
+=== Testing with lz4 compression ===
+=== Testing with 0 stream(s)===
+Testing: lz4 compression with 0 streams (run 1/3)
+  Starting job: test-job-1769076923-lz4-0-run1
+24.543549ms      cedana.(*Server).Run.Manage
+    1.735µs      defaults.FillMissingRunDefaults
+    1.143µs      validation.ValidateRunRequest
+      856ns      process.WritePIDFile
+    1.081µs      cedana.(*Server).Run.Attach
+   13.461µs      cedana.pluginRunMiddleware
+  140.354µs      process.SetupIO[...]
+  323.166µs      cedana.(*Server).Run.pluginRunHandler
+25.025345ms      run (total)
+
+Running managed process PID 639854
+  Checkpoint: 4.30 s, Restore: 4.19 s, Total: 8.49 s
+Killed job test-job-1769076923-lz4-0-run1
+Deleted job test-job-1769076923-lz4-0-run1
+
+=== Testing with 2 stream(s)===
+Testing: lz4 compression with 2 streams (run 1/3)
+  Starting job: test-job-1769076923-lz4-2-run1
+ 23.80904ms      cedana.(*Server).Run.Manage
+    1.659µs      defaults.FillMissingRunDefaults
+    1.063µs      validation.ValidateRunRequest
+    1.097µs      process.WritePIDFile
+      856ns      cedana.(*Server).Run.Attach
+   13.286µs      cedana.pluginRunMiddleware
+   119.63µs      process.SetupIO[...]
+  301.653µs      cedana.(*Server).Run.pluginRunHandler
+24.248284ms      run (total)
+
+Running managed process PID 639974
+  Checkpoint: 4.59 s, Restore: 4.91 s, Total: 9.50 s
+Killed job test-job-1769076923-lz4-2-run1
+Deleted job test-job-1769076923-lz4-2-run1
+
+=== Testing with 4 stream(s)===
+Testing: lz4 compression with 4 streams (run 1/3)
+  Starting job: test-job-1769076923-lz4-4-run1
+23.074636ms      cedana.(*Server).Run.Manage
+    1.149µs      defaults.FillMissingRunDefaults
+    1.033µs      validation.ValidateRunRequest
+      674ns      process.WritePIDFile
+      713ns      cedana.(*Server).Run.Attach
+   10.127µs      cedana.pluginRunMiddleware
+   80.822µs      process.SetupIO[...]
+  324.803µs      cedana.(*Server).Run.pluginRunHandler
+23.493957ms      run (total)
+
+Running managed process PID 640198
+  Checkpoint: 4.90 s, Restore: 5.06 s, Total: 9.96 s
+Killed job test-job-1769076923-lz4-4-run1
+Deleted job test-job-1769076923-lz4-4-run1
+
+=== Testing with 8 stream(s)===
+Testing: lz4 compression with 8 streams (run 1/3)
+  Starting job: test-job-1769076923-lz4-8-run1
+26.752098ms      cedana.(*Server).Run.Manage
+    1.826µs      defaults.FillMissingRunDefaults
+    1.579µs      validation.ValidateRunRequest
+    1.093µs      process.WritePIDFile
+    1.312µs      cedana.(*Server).Run.Attach
+     15.2µs      cedana.pluginRunMiddleware
+  131.962µs      process.SetupIO[...]
+  335.728µs      cedana.(*Server).Run.pluginRunHandler
+27.240798ms      run (total)
+
+Running managed process PID 640359
+  Checkpoint: 5.79 s, Restore: 5.61 s, Total: 11.40 s
+Killed job test-job-1769076923-lz4-8-run1
+Deleted job test-job-1769076923-lz4-8-run1
+
+=== Testing with zlib compression ===
+=== Testing with 0 stream(s)===
+Testing: zlib compression with 0 streams (run 1/3)
+  Starting job: test-job-1769076923-zlib-0-run1
+19.422515ms      cedana.(*Server).Run.Manage
+    2.909µs      defaults.FillMissingRunDefaults
+      825ns      validation.ValidateRunRequest
+      676ns      process.WritePIDFile
+      980ns      cedana.(*Server).Run.Attach
+    9.852µs      cedana.pluginRunMiddleware
+   74.166µs      process.SetupIO[...]
+  372.781µs      cedana.(*Server).Run.pluginRunHandler
+19.884704ms      run (total)
+
+Running managed process PID 640506
+  Checkpoint: 3.95 s, Restore: 3.93 s, Total: 7.88 s
+Killed job test-job-1769076923-zlib-0-run1
+Deleted job test-job-1769076923-zlib-0-run1
+
+=== Testing with 2 stream(s)===
+Testing: zlib compression with 2 streams (run 1/3)
+  Starting job: test-job-1769076923-zlib-2-run1
+23.274218ms      cedana.(*Server).Run.Manage
+    2.022µs      defaults.FillMissingRunDefaults
+    1.241µs      validation.ValidateRunRequest
+      966ns      process.WritePIDFile
+    1.047µs      cedana.(*Server).Run.Attach
+   14.391µs      cedana.pluginRunMiddleware
+  152.533µs      process.SetupIO[...]
+  458.846µs      cedana.(*Server).Run.pluginRunHandler
+23.905264ms      run (total)
+
+Running managed process PID 640681
+  Checkpoint: 3.59 s, Restore: 4.34 s, Total: 7.93 s
+Killed job test-job-1769076923-zlib-2-run1
+Deleted job test-job-1769076923-zlib-2-run1
+
+=== Testing with 4 stream(s)===
+Testing: zlib compression with 4 streams (run 1/3)
+  Starting job: test-job-1769076923-zlib-4-run1
+29.780549ms      cedana.(*Server).Run.Manage
+    2.148µs      defaults.FillMissingRunDefaults
+    1.527µs      validation.ValidateRunRequest
+    1.079µs      process.WritePIDFile
+    1.062µs      cedana.(*Server).Run.Attach
+    16.73µs      cedana.pluginRunMiddleware
+  186.722µs      process.SetupIO[...]
+  354.248µs      cedana.(*Server).Run.pluginRunHandler
+30.344065ms      run (total)
+
+Running managed process PID 640917
+  Checkpoint: 4.13 s, Restore: 4.62 s, Total: 8.75 s
+Killed job test-job-1769076923-zlib-4-run1
+Deleted job test-job-1769076923-zlib-4-run1
+
+=== Testing with 8 stream(s)===
+Testing: zlib compression with 8 streams (run 1/3)
+  Starting job: test-job-1769076923-zlib-8-run1
+34.783966ms      cedana.(*Server).Run.Manage
+    1.797µs      defaults.FillMissingRunDefaults
+    1.241µs      validation.ValidateRunRequest
+    1.007µs      process.WritePIDFile
+    1.108µs      cedana.(*Server).Run.Attach
+   15.644µs      cedana.pluginRunMiddleware
+  143.821µs      process.SetupIO[...]
+  368.771µs      cedana.(*Server).Run.pluginRunHandler
+35.317355ms      run (total)
+
+Running managed process PID 641069
+  Checkpoint: 4.81 s, Restore: 5.68 s, Total: 10.49 s
+Killed job test-job-1769076923-zlib-8-run1
+Deleted job test-job-1769076923-zlib-8-run1
+
+=== RUN: 2 ===
+=== Testing with none compression ===
+=== Testing with 0 stream(s)===
+Testing: none compression with 0 streams (run 2/3)
+  Starting job: test-job-1769076923-none-0-run2
+26.883586ms      cedana.(*Server).Run.Manage
+    1.615µs      defaults.FillMissingRunDefaults
+    1.096µs      validation.ValidateRunRequest
+      990ns      process.WritePIDFile
+      953ns      cedana.(*Server).Run.Attach
+   14.298µs      cedana.pluginRunMiddleware
+  126.541µs      process.SetupIO[...]
+  304.229µs      cedana.(*Server).Run.pluginRunHandler
+27.333308ms      run (total)
+
+Running managed process PID 641204
+  Checkpoint: 53.79 s, Restore: 55.61 s, Total: 109.40 s
+Killed job test-job-1769076923-none-0-run2
+Deleted job test-job-1769076923-none-0-run2
+
+=== Testing with 2 stream(s)===
+Testing: none compression with 2 streams (run 2/3)
+  Starting job: test-job-1769076923-none-2-run2
+24.468095ms      cedana.(*Server).Run.Manage
+    1.842µs      defaults.FillMissingRunDefaults
+    1.175µs      validation.ValidateRunRequest
+    1.126µs      process.WritePIDFile
+      828ns      cedana.(*Server).Run.Attach
+   13.274µs      cedana.pluginRunMiddleware
+  152.634µs      process.SetupIO[...]
+   344.98µs      cedana.(*Server).Run.pluginRunHandler
+24.983954ms      run (total)
+
+Running managed process PID 641504
+  Checkpoint: 53.02 s, Restore: 51.44 s, Total: 104.46 s
+Killed job test-job-1769076923-none-2-run2
+Deleted job test-job-1769076923-none-2-run2
+
+=== Testing with 4 stream(s)===
+Testing: none compression with 4 streams (run 2/3)
+  Starting job: test-job-1769076923-none-4-run2
+21.354899ms      cedana.(*Server).Run.Manage
+    1.112µs      defaults.FillMissingRunDefaults
+      927ns      validation.ValidateRunRequest
+      639ns      process.WritePIDFile
+      791ns      cedana.(*Server).Run.Attach
+    10.42µs      cedana.pluginRunMiddleware
+    91.07µs      process.SetupIO[...]
+  342.031µs      cedana.(*Server).Run.pluginRunHandler
+21.801889ms      run (total)
+
+Running managed process PID 641685
+  Checkpoint: 50.58 s, Restore: 49.58 s, Total: 100.16 s
+Killed job test-job-1769076923-none-4-run2
+Deleted job test-job-1769076923-none-4-run2
+
+=== Testing with 8 stream(s)===
+Testing: none compression with 8 streams (run 2/3)
+  Starting job: test-job-1769076923-none-8-run2
+24.079773ms      cedana.(*Server).Run.Manage
+    1.741µs      defaults.FillMissingRunDefaults
+    1.312µs      validation.ValidateRunRequest
+      887ns      process.WritePIDFile
+    1.065µs      cedana.(*Server).Run.Attach
+    14.17µs      cedana.pluginRunMiddleware
+  113.074µs      process.SetupIO[...]
+   373.64µs      cedana.(*Server).Run.pluginRunHandler
+24.585662ms      run (total)
+
+Running managed process PID 641876
+  Checkpoint: 54.28 s, Restore: 48.53 s, Total: 102.81 s
+Killed job test-job-1769076923-none-8-run2
+Deleted job test-job-1769076923-none-8-run2
+
+=== Testing with tar compression ===
+=== Testing with 0 stream(s)===
+Testing: tar compression with 0 streams (run 2/3)
+  Starting job: test-job-1769076923-tar-0-run2
+22.687978ms      cedana.(*Server).Run.Manage
+    2.042µs      defaults.FillMissingRunDefaults
+    1.239µs      validation.ValidateRunRequest
+    1.115µs      process.WritePIDFile
+    1.225µs      cedana.(*Server).Run.Attach
+   14.858µs      cedana.pluginRunMiddleware
+ 3.010673ms      process.SetupIO[...]
+  664.039µs      cedana.(*Server).Run.pluginRunHandler
+26.383169ms      run (total)
+
+Running managed process PID 642233
+  Checkpoint: 49.10 s, Restore: 54.28 s, Total: 103.38 s
+Killed job test-job-1769076923-tar-0-run2
+Deleted job test-job-1769076923-tar-0-run2
+
+=== Testing with 2 stream(s)===
+Testing: tar compression with 2 streams (run 2/3)
+  Starting job: test-job-1769076923-tar-2-run2
+19.925077ms      cedana.(*Server).Run.Manage
+    1.457µs      defaults.FillMissingRunDefaults
+      900ns      validation.ValidateRunRequest
+      685ns      process.WritePIDFile
+      714ns      cedana.(*Server).Run.Attach
+    9.301µs      cedana.pluginRunMiddleware
+  105.483µs      process.SetupIO[...]
+  333.043µs      cedana.(*Server).Run.pluginRunHandler
+ 20.37666ms      run (total)
+
+Running managed process PID 642484
+  Checkpoint: 55.98 s, Restore: 59.47 s, Total: 115.45 s
+Killed job test-job-1769076923-tar-2-run2
+Deleted job test-job-1769076923-tar-2-run2
+
+=== Testing with 4 stream(s)===
+Testing: tar compression with 4 streams (run 2/3)
+  Starting job: test-job-1769076923-tar-4-run2
+27.449957ms      cedana.(*Server).Run.Manage
+    2.081µs      defaults.FillMissingRunDefaults
+    1.664µs      validation.ValidateRunRequest
+    1.082µs      process.WritePIDFile
+    1.312µs      cedana.(*Server).Run.Attach
+   15.609µs      cedana.pluginRunMiddleware
+  160.251µs      process.SetupIO[...]
+  571.295µs      cedana.(*Server).Run.pluginRunHandler
+28.203251ms      run (total)
+
+Running managed process PID 642798
+  Checkpoint: 47.75 s, Restore: 52.05 s, Total: 99.80 s
+Killed job test-job-1769076923-tar-4-run2
+Deleted job test-job-1769076923-tar-4-run2
+
+=== Testing with 8 stream(s)===
+Testing: tar compression with 8 streams (run 2/3)
+  Starting job: test-job-1769076923-tar-8-run2
+21.660196ms      cedana.(*Server).Run.Manage
+    1.149µs      defaults.FillMissingRunDefaults
+      881ns      validation.ValidateRunRequest
+      724ns      process.WritePIDFile
+      767ns      cedana.(*Server).Run.Attach
+   15.025µs      cedana.pluginRunMiddleware
+  107.028µs      process.SetupIO[...]
+  406.033µs      cedana.(*Server).Run.pluginRunHandler
+22.191803ms      run (total)
+
+Running managed process PID 643051
+  Checkpoint: 59.02 s, Restore: 50.50 s, Total: 109.52 s
+Killed job test-job-1769076923-tar-8-run2
+Deleted job test-job-1769076923-tar-8-run2
+
+=== Testing with gzip compression ===
+=== Testing with 0 stream(s)===
+Testing: gzip compression with 0 streams (run 2/3)
+  Starting job: test-job-1769076923-gzip-0-run2
+30.389197ms      cedana.(*Server).Run.Manage
+    2.196µs      defaults.FillMissingRunDefaults
+    1.505µs      validation.ValidateRunRequest
+    1.269µs      process.WritePIDFile
+    1.192µs      cedana.(*Server).Run.Attach
+   17.453µs      cedana.pluginRunMiddleware
+  149.446µs      process.SetupIO[...]
+  369.767µs      cedana.(*Server).Run.pluginRunHandler
+30.932025ms      run (total)
+
+Running managed process PID 643497
+  Checkpoint: 4.34 s, Restore: 4.06 s, Total: 8.40 s
+Killed job test-job-1769076923-gzip-0-run2
+Deleted job test-job-1769076923-gzip-0-run2
+
+=== Testing with 2 stream(s)===
+Testing: gzip compression with 2 streams (run 2/3)
+  Starting job: test-job-1769076923-gzip-2-run2
+25.327678ms      cedana.(*Server).Run.Manage
+    1.619µs      defaults.FillMissingRunDefaults
+      994ns      validation.ValidateRunRequest
+      799ns      process.WritePIDFile
+      874ns      cedana.(*Server).Run.Attach
+   14.531µs      cedana.pluginRunMiddleware
+  120.377µs      process.SetupIO[...]
+  330.792µs      cedana.(*Server).Run.pluginRunHandler
+25.797664ms      run (total)
+
+Running managed process PID 643723
+
