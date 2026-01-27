@@ -155,12 +155,14 @@ run_test() {
 
     # Create unique job name for this run
     local job_name="${JOB_BASE}-${compression}-${streams}-run${run_num}"
-    local dir_path="s3://bhavik-streamer-bench/${JOB_NAME}"
+    local dir_path="s3://bhavik-streamer-test/${JOB_NAME}"
+    # local dir_path="cedana://bhavik-${JOB_NAME}"
 
     # Start the managed job
     echo "  Starting job: $job_name"
-    cedana run process python3 stress.py --jid "$job_name"
-    sleep 1
+    # cedana run process python3 stress.py --jid "$job_name"
+    cedana run process --gpu-enabled --jid "$job_name" -- /home/ubuntu/Code/streamer-bench/cuda_stress
+    sleep 2
 
     # Make sure the job is running
     if ! cedana job list | grep -q "$job_name"; then
@@ -265,7 +267,7 @@ echo ""
 # Calculate averages if multiple runs
 if [ "$RUNS" -gt 1 ]; then
     echo "=== Average Times ==="
-    python3.14 -c "
+    python -c "
 import pandas as pd
 import numpy as np
 

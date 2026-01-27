@@ -1,0 +1,64 @@
+=== System Information ===
+Timestamp: 2026-01-27T15:10:43+00:00
+
+=== Hardware Information ===
+CPU:
+CPU(s):                                  8
+On-line CPU(s) list:                     0-7
+Model name:                              AMD EPYC 7R13 Processor
+BIOS Model name:                         AMD EPYC 7R13 Processor  CPU @ 2.6GHz
+Thread(s) per core:                      2
+Core(s) per socket:                      4
+Socket(s):                               1
+NUMA node0 CPU(s):                       0-7
+
+Memory:
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi       879Mi        28Gi       3.0Mi       812Mi        29Gi
+Swap:             0B          0B          0B
+
+Storage:
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root        48G   15G   33G  31% /
+
+NAME         MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+loop0          7:0    0  27.6M  1 loop /snap/amazon-ssm-agent/11797
+loop1          7:1    0  27.8M  1 loop /snap/amazon-ssm-agent/12322
+loop2          7:2    0    74M  1 loop /snap/core22/2163
+loop3          7:3    0  73.9M  1 loop /snap/core22/2216
+loop4          7:4    0  53.3M  1 loop /snap/go/11017
+loop5          7:5    0  45.1M  1 loop /snap/gopls/1089
+loop6          7:6    0  31.7M  1 loop /snap/nvim/4611
+loop7          7:7    0  50.9M  1 loop /snap/snapd/25577
+loop8          7:8    0  48.1M  1 loop /snap/snapd/25935
+nvme1n1      259:0    0 419.1G  0 disk 
+nvme0n1      259:1    0    50G  0 disk 
+├─nvme0n1p1  259:2    0    49G  0 part /
+├─nvme0n1p14 259:3    0     4M  0 part 
+├─nvme0n1p15 259:4    0   106M  0 part /boot/efi
+└─nvme0n1p16 259:5    0   913M  0 part /boot
+
+=== Software Environment ===
+OS:
+PRETTY_NAME="Ubuntu 24.04.3 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.3 LTS (Noble Numbat)"
+VERSION_CODENAME=noble
+UBUNTU_CODENAME=noble
+
+Kernel: 6.14.0-1018-aws
+
+CRIU:
+Version: 4.2
+
+Cedana:
+
+=== Runtime Context ===
+System Load:
+ 15:10:44 up 59 min,  1 user,  load average: 0.05, 0.16, 0.35
+
+Available Memory:
+Mem:            30Gi       882Mi        28Gi       3.0Mi       812Mi        29Gi
+
+Power Settings:
