@@ -4,9 +4,9 @@ import numpy as np
 
 
 def load_data():
-    local_df = pd.read_csv("results/3_runs_local.csv")
-    s3_df = pd.read_csv("results/3_runs_s3.csv")
-    cedana_df = pd.read_csv("results/3_runs_cedana_storage_timings.csv")
+    local_df = pd.read_csv("results/v2/5_runs_gpu_local_storage_stress.csv")
+    s3_df = pd.read_csv("results/v2/5_runs_s3_gpu.csv")
+    cedana_df = pd.read_csv("results/v2/5_runs_cedana_gpu.csv")
 
     local_df["storage"] = "local"
     s3_df["storage"] = "s3"
@@ -141,11 +141,12 @@ def plot_graph(stats_df, stat_type):
                 if "restore" not in by_label:
                     by_label[f"{storage} (restore)"] = handle
 
-        ax.legend(by_label.values(), by_label.keys(), loc="upper left")
+        ax.legend(by_label.values(), by_label.keys(), bbox_to_anchor=(1.02, 1), loc="upper left")
         ax.grid(axis="y", alpha=0.3)
 
     plt.tight_layout()
-    output_file = f"plots/stream_benchmarks_{stat_type}_v2.png"
+    plt.subplots_adjust(right=0.85)
+    output_file = f"plots/stream_benchmarks_gpu_{stat_type}.png"
     plt.savefig(output_file, dpi=300, bbox_inches="tight")
     print(f"Saved {output_file}")
     plt.close()
