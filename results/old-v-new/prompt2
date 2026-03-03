@@ -1,0 +1,18 @@
+also create a README.md inside (old-v-new) that displays the graph in the following way
+
+the top of the README should say the following:
+- cuda_stress has an approxmate size of ~700MB, stress_py has ~500MB
+- without memory limit refers to streamer before we added a memory limit. ie before my changes
+
+just format these bullet points better
+
+before a graph have the heading of the following type:
+GPU == cuda_stress
+CPU == stress_py
+
+[GPU OR CPU] [CEDANA STORAGE OR LOCAL] [STREAMS = (2, 4, 8)]
+
+place the appropriate graph below the heading
+
+the order should be all the GPU CEDANA GRAPHS followed by the CPU CEDANA GRAPHS and the rest afterwards
+
