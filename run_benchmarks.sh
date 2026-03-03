@@ -155,8 +155,8 @@ run_test() {
 
     # Create unique job name for this run
     local job_name="${JOB_BASE}-${compression}-${streams}-run${run_num}"
-    local dir_path="s3://bhavik-streamer-test/${JOB_NAME}"
-    # local dir_path="cedana://bhavik-${JOB_NAME}"
+    # local dir_path="s3://bhavik-streamer-test/${JOB_NAME}"
+    local dir_path="cedana://bhavik-${JOB_NAME}"
 
     # Start the managed job
     echo "  Starting job: $job_name"
@@ -225,6 +225,7 @@ run_test() {
 
     # Cleanup this job
     cedana job kill "$job_name" 2>/dev/null || true
+    sleep 0.5
     cedana job delete "$job_name" 2>/dev/null || true
     rm -rf /tmp/dump-process-*
 
